@@ -46,6 +46,7 @@ List<Car>? GetAll() => cars;
 
 bool Add(Car car)
 {
+    if (GetById(car.Id) != null) return false;
     cars.Add(car);
     return true;
 }
